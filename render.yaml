@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: booknook-server
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+      - key: AUTH_JWKS_URL
+        sync: false
